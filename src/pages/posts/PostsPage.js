@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
-
+import ChooseCategory from "../../components/ChooseCategory";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
 import { useLocation } from "react-router";
@@ -22,7 +22,7 @@ function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
-
+  const [setFilter] = useState("");
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -63,6 +63,8 @@ function PostsPage({ message, filter = "" }) {
             placeholder="Search posts"
           />
         </Form>
+
+        <ChooseCategory setFilter={setFilter} />
 
         {hasLoaded ? (
           <>

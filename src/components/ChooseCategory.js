@@ -19,7 +19,7 @@ const ChooseCategory = ({ setFilter, mobile }) => {
             }
         };
 
-        ChooseCategory.propTypes = {
+            ChooseCategory.propTypes = {
             setFilter: PropTypes.func.isRequired,
             mobile: PropTypes.bool,
           };
