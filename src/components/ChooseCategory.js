@@ -19,10 +19,7 @@ const ChooseCategory = ({ setFilter, mobile }) => {
             }
         };
 
-            ChooseCategory.propTypes = {
-            setFilter: PropTypes.func.isRequired,
-            mobile: PropTypes.bool,
-          };
+        
 
         fetchCategories();
     }, []);
@@ -37,7 +34,7 @@ const ChooseCategory = ({ setFilter, mobile }) => {
                 <Form.Control
                     className={styles.Dropdown}
                     as="select"
-                    onChange={(e) => setFilter(e.target.value)}
+                    onChange={(e) => setFilter(`category=${e.target.value}&`)}
                     defaultValue=""
                 >
                     <option value="">All Categories</option>
@@ -52,5 +49,9 @@ const ChooseCategory = ({ setFilter, mobile }) => {
         </Container>
     );
 };
+ChooseCategory.propTypes = {
+    setFilter: PropTypes.func.isRequired,
+    mobile: PropTypes.bool,
+  };
 
 export default ChooseCategory;

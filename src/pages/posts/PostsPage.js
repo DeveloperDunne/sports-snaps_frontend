@@ -18,11 +18,11 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 
-function PostsPage({ message, filter = "" }) {
+function PostsPage({ message }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
-  const [setFilter] = useState("");
+  const [filter, setFilter] = useState("");
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -45,6 +45,8 @@ function PostsPage({ message, filter = "" }) {
       clearTimeout(timer);
     };
   }, [filter, query, pathname]);
+
+  console.log('setFilter', setFilter);
 
   return (
     <Row className="h-100">
