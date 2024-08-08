@@ -41,7 +41,7 @@ function PostCreateForm() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/');
+        const response = await fetch('https://sportssnaps-api-4f584f2a4ad4.herokuapp.com/category/');
         const data = await response.json();
         if (Array.isArray(data.results)) {
           setCategories(data.results);
