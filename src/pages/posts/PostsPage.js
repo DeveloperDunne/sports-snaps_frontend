@@ -46,7 +46,6 @@ function PostsPage({ message }) {
     };
   }, [filter, query, pathname]);
 
-  console.log('setFilter', setFilter);
 
   return (
     <Row className="h-100">
