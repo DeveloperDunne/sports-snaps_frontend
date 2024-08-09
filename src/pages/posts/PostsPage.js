@@ -32,7 +32,7 @@ function PostsPage({ message }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        (err);
       }
     };
 
