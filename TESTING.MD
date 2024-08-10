@@ -99,13 +99,15 @@ Validators and Lighthouse reports were also used to minimise errors,all major bu
 
 # Validators
 
-# Reports
-
 ## W3C CSS
+
+[Screenshot]
 
 ## Wave
 
 [Screenshot]
+
+# Reports
 
 ## Lighthouse
 
@@ -115,6 +117,12 @@ Validators and Lighthouse reports were also used to minimise errors,all major bu
 
 ## Bug 1
 
+[Screenshot]
+
 ## Bug 2
 
+[Screenshot]
+
 ## Bug3
+
+[Screenshot]
