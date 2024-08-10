@@ -1,6 +1,17 @@
+
+# Testing
+
+Manual testing was carried out to ensure the site and its features worked as expected. 
+
+Validators and Lighthouse reports were also used to minimise errors,all major bugs and fixes are documentd.
+
+#  Contents
+1. [Manual Testing](#manual-testing)
+2. [Validators](#validators)
+3. [Reports](#reports)
+4. [Bugs and Fixes](#bugs-and-fixes)
+
 # Manual Testing
-
-
 ## Navigation
 
 | **Test**                                              | **Expected Result**                                                                                |  **Result** |
@@ -85,3 +96,25 @@
 | All fields completed                             	    | User able to submit form.                                                     				     | ✅ Pass     | 
 | Not all fields completed                              | User notified errors and shown what is required.                                                	 | ✅ Pass     | 
 | Modal when sending message                            | Modal loads and notifies user message has been sent.           								     | ✅ Pass     | 
+
+# Validators
+
+# Reports
+
+## W3C CSS
+
+## Wave
+
+[Screenshot]
+
+## Lighthouse
+
+[Screenshot]
+
+# Bugs and Fixes
+
+## Bug 1
+
+## Bug 2
+
+## Bug3
