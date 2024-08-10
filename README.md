@@ -235,7 +235,7 @@ All code for this project was written using the IDE Visual Studio code (VS Code)
 ## Credits
 
 ### Code
-The CI walkthrough (Moments) was leaned on and relied upon heavily in this project due to time restraints and there are still some remnants of legacy code within. As I was really pushed for time to complete the project I used the CI code and initial styling as a base before implementing my own custom features and styles. 
+The CI walkthroughs (DRF Rest Framework API & Moments) were leaned on and relied upon heavily in this project due to time restraints, there are still some remnants of legacy code within. As I was really pushed for time to complete the project I used the CI code and initial styling as a base before implementing my own custom features and styles. 
 
 I created a Contact model where users can contact the admin if equired by filling out a form and also added a category feature.
 
