@@ -140,6 +140,14 @@ This page is where the user can sign in so that they can have access to the bene
 
 This is the sign out page where users can log out.
 
+### Add Post Page
+
+### Feed Page
+
+### Like Page
+
+### Profile Page
+
 ### Future Features
 
 Features I would have liked to implement but did not get time to would be a notification feature where authorized users would be notified when someone tat they follow posts a new photo.

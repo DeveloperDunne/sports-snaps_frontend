@@ -26,11 +26,12 @@ function PostsPage({ message }) {
   const [filter, setFilter] = useState("");
   const [query, setQuery] = useState("");
   const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}likes__owner__profile=${profile_id}&ordering=-likes__created_at&search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -46,7 +47,7 @@ function PostsPage({ message }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname, currentUser]);
+  }, [filter, query, pathname, currentUser, profile_id]);
 
 
   return (
