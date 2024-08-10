@@ -34,7 +34,7 @@ function PostsPage({ message }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        (err);
+        // console.log(err);
       }
     };
 
