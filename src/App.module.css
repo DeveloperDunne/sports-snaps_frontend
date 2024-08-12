@@ -30,7 +30,7 @@
   }
   
   a {
-    color: white;
+    color: black;
     transition: color ease-in-out 0.3s;
   }
   
@@ -39,7 +39,7 @@
   }
   
   a:hover i {
-    color: #2142b2;
+    color: white;
     transition: color ease-in-out 0.3s;
   }
   
