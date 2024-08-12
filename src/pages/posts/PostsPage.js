@@ -57,12 +57,11 @@ function PostsPage({ message }) {
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
-        <i className={`fas fa-search ${styles.SearchIcon}`} />
-        <Form
+        <Form 
           className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
         >
-          <Form.Control
+        <Form.Control
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             type="text"
