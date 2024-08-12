@@ -31,7 +31,7 @@ function PostsPage({ message }) {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}likes__owner__profile=${profile_id}&ordering=-likes__created_at&search=${query}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}&search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
