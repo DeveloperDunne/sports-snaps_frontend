@@ -1,263 +1,264 @@
-# Sports Snaps - Frontend.
+# Sports Snaps - API 
 
-Sports Snaps is a social media platform that lets users post images and share their content with other people. Signed up Members can post pictures, like other posts, comment on posts and also edit and delete their posts. Members can also follow other members to create a personalized feed.
+Sports Snaps API is a Django-based web application for the website [Sports Snaps](https://sportssnaps-37b7ee6411c9.herokuapp.com/). The website is a social media platform designed for users to share their most liked sporting photos or moments.
 
 
-## Live Site
-
-![AmIResponsive](./README-Images/responsive.webp)
-
-[You can view the live web application here.](https://sportssnaps-37b7ee6411c9.herokuapp.com/)
-
-## Site Repositories
+# Site Repositories
 
 [Frontend Repository](https://github.com/DeveloperDunne/sports-snaps_frontend)
 
 [API Repository](https://github.com/DeveloperDunne/Sports-Snaps-API)
 
-## Table of contents
+# Table of contents
 
-- [1. User Expeience](#user-experience-ux)
-- [2. Agile Methodology](#agile-methodology)
-- [3. The Scope](#the-scope)
-- [4. Design](#design)
-- [5. Features](#features)
-- [6. Django Admin](#django-admin)
-- [7. Technologies Used](#technologies-used)
-- [8. Testing](#testing)
+- [1. Planning](#planning)
+- [2. Admin](#admin)
+- [3. Relationships and Endpoints](#relationships-and-endpoints)
+- [4. Testing](#testing)
+- [5. Languages and Technologies](#languages-and-technologies)
+- [6. Installed Packages](#installed-packages)
+- [7. Security](#security)
+- [8. Setup](#setup)
 - [9. Deployment](#deployment)
 - [10. Credits](#credits)
-- [11. Acknowledgements](#acknowledgements)
 
-## User Experience
-
-### User Stories
-
-* As a website user, I can:
-
-<br>
-
-1. Navigate around the site and easily view the content that has been posted.
-
-2. Comment and like posts to interact with the community.
-
-3. Follow my favorite users.
-
-4. Access a contact page where I can contact the admin if required.
-
-5. Register for an account to access the services offered to authorized members.
-
-<br>
-
-* As a website superuser, I can:
-
-<br>
-
-1. Create and publish a new post.
-
-2. Create a new user.
-
-3. Delete users.
-
-4. Approve, reject or delete user's posts or comments.
+# Planning
 
 ## Agile Methodology
 
 * All functionality and development of this project were managed using GitHub Projects. This can be found here at [Github Projects](https://github.com/users/DeveloperDunne/projects/6/views/1).
 
-### MoSCoW
+## MoSCoW
 
-![MoSCoW screenshot](./README-Images/MoSCoW.webp)
+![MoSCoW screenshot](./README_Images/admin_images/MoSCoW.webp)
 
 This project used the "MoSCoW" method to classify features and requirements according to their importance towards a minimum viable product (MVP). "MoSCoW" stands for "Must have, Should have, Could have and Won't have," with each classification aiding in the prioritization of features. This method makes sure that essential components are tackled in priority order.
 
-## The Scope
+# Admin
 
-### Main Site Goals
+## Root Admin View
 
-* To provide users with a good experience when using the website.
-* To provide users with a visually pleasing website that is intuitive and easy to navigate.
-* To provide a website with a clear purpose.
-* To provide role-based permissions that allow users to interact with the website.
-* The ability to contact admin if required.
-* The ability to update and delete comments if desired.
-* The ability to interact with the community by commenting, following and liking posts.
+![Root screenshot](./README_Images/admin_images/root-route.webp)
 
-### Target audience
+## Admin Panel
 
-This blog is for sports fans who are interested in interacting with a like-minded community who share their love for sporting moments captured in pictures.
+![Admin Panel screenshot](./README_Images/admin_images/admin-site.webp)
 
-## Design
+## Superusers
+Superusers can perform the following via the admin panel:
 
-### Wireframes
-Balsamiq was used to design the blog's look.
+CRUD Posts
+CRUD Comments
+CRUD Profiles
+CRUD Contacts
+CRUD Category
+Change Passwords
+Change emails
 
-### Colour Theme
-![Colour Theme](./README-Images/theme.webp)
 
-The colour theme above was used throughout the project to ensure consistency, seem welcoming and appeal to the user. The navigation bar is a gradient to add uniqueness.
+# Relationships and Endpoints
 
-### Fonts
-The font used was 'Teko'. All fonts were sourced from [Google Fonts](https://fonts.google.com/).
+## Profile
+- created_at(DateTimeField),
+- updated_at(DateTimeField),
+- name(CharField),
+- email(EmailField),
+- content(TextField),
+- image(ImageField),
+- facebook_link(URLField),
+- twitter_link(URLField) and
+- instagram_field(URLField)
 
-## Features
+### Endpoints:
+- /profiles/: to list (GET) profiles.
+- /profiles/:id/: to show (GET) or update (PUT) a profile.
 
-### Navigation Bar:
-![Navigation Bar](./README-Images/burger.webp)
+![profiles screenshot](./README_Images/admin_images/admin-profiles.webp)
 
-A responsive navigation bar is situated at the top of the page. When on a mobile the bar condenses into a burger icon which will enable a dropdown menu, however on a desktop all pages are displayed along the bar. What is shown in the navigation bar depends on whether the user is logged in or not.
+## Post
+- owner(ForeignKey),
+- created_at(DateTimeField),
+- updated_at(DateTimeField),
+- title(CharField),
+- content(TextField),
+- image(ImageField),
+- image_filter(CharField)
+- category(ForeignKey)
 
-### Not logged in:
-![Navigation Bar - Not Logged in](./README-Images/navbar.webp)
+### Endpoints:
+- /posts/: to list (GET) or create (POST) posts.
+- /posts/:id/: to show (GET), update (PUT) or delete (DELETE) a post.
 
-When not logged in you will be able to see the following pages: Home, Sign In, Sign Up and Contact.
+![Posts screenshot](./README_Images/admin_images/admin-posts.webp)
 
-### Logged in:
-![Navigation Bar - Logged in](./README-Images/logged-in.webp)
+## Comments
+- owner(ForeignKey),
+- content(TextField),
+- created_at(DateTimeField),
+- updated_at(DateTimeField)
 
-When logged in the Register and Sign-in page disappears and instead you will see the following.
+### Endpoints:
+- /comments/: to list (GET) all comments or create (POST) a new comment.
+- /comments/:id/: to show (GET) a specific comment, update (PUT) or delete (DELETE) a comment.
 
-### Landing Page
-![Home Page](./README-Images/landing-page.webp)
+## Likes
+- post(ForeignKey) and
+- created_at(DateTimeField)
 
-Upon arrival to the website, the landing page will be loaded. Here you will be able to see posts that authorized users have already posted drawing you into what is to come.
+### Endpoints:
+- /likes/: to list (GET) or create (POST) likes.
+- /likes/:id/: to show (GET) or delete (DELETE) a like.
 
-### Contact Page
-![Contact](./README-Images/contactus.webp)
+![Likes screenshot](./README_Images/admin_images/admin-likes.webp)
 
-The contact page consists of a form that the user can fill out and submit if they have any questions.
+## Followers 
+- owner(ForeignKey),
+- followed(ForeignKey),
+- created_at(DateTimeField)
 
-### Sign Up Page
-![Sign Up](./README-Images/signup.webp)
+### Endpoints:
+- /followers/: to list (GET) profiles.
+- /followers/:id/: to show (GET) or delete (DELETE) a follow.
 
-This page is a form where the user can sign up to reap the benefits of being a logged in user.
+![Followers screenshot](./README_Images/admin_images/admin-followers.webp)
 
-### Sign In Page
-![Sign in](./README-Images/signin.webp)
+## Category
+- name(CharField)
 
-This page is where the user can sign in so that they can have access to the benefits of being an authorized user.
+### Endpoints:
+- /category/: to list (GET) categories.
 
-### Sign Out Page
+![Categories screenshot](./README_Images/admin_images/admin-categories.webp)
 
-Once users click the sign out link they will be redirected to the landing page.
+## Contact
+- email(EmailField),
+- subject(Charfield),
+- message(TextField),
+- created_at(DateTimeField),
+- read(BooleanField),
+- admin_response(TextField)
 
-### Add Post Page
-![Sign in](./README-Images/add-post.webp)
+![Contact screenshot](./README_Images/admin_images/admin-contact.webp)
 
-Here logged in users can create their own posts to share with the community.
 
-### Feed Page
+# Testing
 
-The feed page will show all of the posts that the registered user has decided to follow.
+Manual Testing for the overall functionality of the API was performed by entering test data in the backend both via Backend and Front-end. 
 
-### Like Page
+Detailed testing documentation can be found here [TESTING.MD](/TESTING.MD)
 
-the Like page will show all of the posts the registered user has liked.
+# Languages and Technologies
 
-### Profile Page
+- Django REST Framework (Python Framework - API)
+- PostgreSQL from CI
 
-![Sign in](./README-Images/profile.webp)
+# Installed Packages
 
-This page will provide all information about a user. If you are the the user of the profile you have the option to amend details.
 
-### Future Features
+The following packages were installed when developing this project: 
 
-Features I would have liked to implement but did not get time to would be a notification feature where authorized users would be notified when someone that they follow posts a new photo.
+To install, the following command was run in the terminal: pip3 install ...
 
-I would also liked to add more styling to the overall look of the site however I just ran out of time.
+- asgiref==3.8.1
+- cloudinary==1.40.0
+- dj-database-url==0.5.0
+- dj-rest-auth==2.1.9
+- Django==5.0.7
+- django-allauth==0.50.0
+- Django-Cloudinary-storage==0.3.0
+- django-cors-headers==4.4.0
+- Django-filter==24.2
+- djangorestframework==3.15.2
+- - djangorestframework-simplejwt==5.3.1
+- gunicorn==22.0.0
+- oauthlib==3.2.2
+- pillow==10.4.0
+- psycopg2==2.9.9
+- PyJWT==2.8.0
+- python3-openid==3.2.0
+- requests-oauthlib==2.0.0
+- setuptools==68.0.0
+- sqlparse==0.5.1
 
-## Technologies Used
+# Security
 
-### Languages Used
+### env.py File
 
-* HTML 5
-* CSS 3
-* JavaScript
-* React
-* Django-Rest Framework
-* Python
+API keys and databases are stored in the env.py which is not included in version control to prevent exposure.
 
-### Frameworks & Libraries Used
+# Setup
 
-* React-Bootstrap: This was used to style the website, and add responsiveness and interactivity.
+### GitHub
 
-* Git: Was used for version control to commit to Git and push to GitHub.
+The project was developed using GitHub and coded via the IDE GitPod.
 
-* GitHub: Is is used to store the project's code after being pushed from Git
+- Navigate to: "Repositories" and create "New".
+- Mark the following field: ✓ Public
+- Select template: "Code-Institute-Org/react-ci-template".
+- Add a Repository name then create Repository.
 
-* Heroku: Was used to deploy the live project.
+### Terminal Commands
 
-* GitHub / VSCode: This was used to create and edit the website.
+Commits:
 
-* Fontawesome: To add icons to the website.
+- git add . 
+- git commit -m "commit message"
+- git push
 
-* Google Fonts: To add the fonts that could be used for the project.
+To run server:
 
-* Coolors: To build the colour palette of the project.
+- python manage.py runserver 
 
-* Balsamiq: To build the wireframes for the project.
+To make migrations:
 
-### Databases
+- python manage.py makemigrations
+- python manage.py migrate <- Applies pending migrations
 
-* CI PostgreSQL from Code Institute was used as the PostgreSQL database for this project.
+To add dependencies:
 
-## Testing
+- pip3 freeze --local > requirements.txt <-Runs the req.
 
-Detailed testing documentation can be found here[ TESTING.MD](./TESTING.MD)
+Creating a Superuser:
 
-## Deployment
+- python manage.py createsuperuser
 
-All code for this project was written using the IDE Visual Studio code (VS Code) using a Gitpod workspace. Github was used for version control and the application was deployed via Heroku.
+Starting a new Django project:
 
- ### Heroku Deployment
+- django-admin startproject NAMEOFTHEPROJECT .
 
-* This site was deployed by completing the following steps:
+Create an app:
 
-1. Log in to Heroku or create an account.
+- python3 manage.py startapp NAMOFTHEAPP
 
-2. On the main page click Create New App.
+# Deployment
 
-3. Select your region.
+The website is being hosted and deployed on Heroku:
 
-4. Click on the Create App button.
+Navigate to: "Create new app" add a unique name "djangorestframework-api" and select your region. Click "Create App"
+Head over to the "Settings" tab and apply the respective config VARs
+Move to the "Deploy" section and select "Github" method"
+From here search for the repository name "connect", from the GitHub account.
+Hit "Connect" and "Enable Automatic Deploys" to keep the repository in parallel to Heroku.
+Manually "Deploy Main Branch".
 
-5. The next page is the project’s Deploy Tab, click the Settings Tab.
+## How to Fork
 
-6. Go to the Deploy tab.
+To fork a repository on GitHub, follow these steps:
 
-7. Select Github as your deployment method.
+- Log in to GitHub - or set up a new account.
+- Click on the repository name.
+- Click the Fork button in the top right corner.
 
-8. Connect to GitHub.
+## How to Clone
 
-9. Search your repository name and connect.
+To clone a repository on GitHub, follow these steps:
 
-10. Click either Enable Automatic Deploys for automatic deployment when you push updates to GitHub or manual to do this manually.
+- Log in to GitHub - or set up a new account.
+- Find or create your repository.
+- Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+- Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+- Type 'git clone' into the terminal and paste the link you copied in step 3. Press enter.
 
-### Cloning:
+# Credits
 
-1. Go to the repository on GitHub.
-
-2. Click on the Code button and copy the https URL under Clone.
-
-3. Open a terminal.
-
-4. Go to the folder you want to store the cloned repository.
-
-5. In the terminal type git clone and paste the URL of the cloned repository after it then press Enter.
-
-6. The site will then be cloned to that directory.
-
-### Fork this repository:
-
-- Go to the GitHub repository.
-- Click on the Fork button in the upper right-hand corner.
-
-## Credits
-
-### Code
-The CI walkthroughs (DRF Rest Framework API & Moments) were leaned on and relied upon heavily in this project due to time restraints, there are still some remnants of legacy code within. As I was really pushed for time to complete the project I used the CI code and initial styling as a base before implementing my own custom features and styles. 
-
-I created a Contact model where users can contact the admin if required by filling out a form and also added a category feature.
-
-## Acknowledgements
-Thank you to the Slack community and especially tutors which I relied on a lot for all their help throughout this project. Also thank you to my friends and family for help with testing the project.
+All credits and acknowledgments have been detailed in the main [Frontend Repo README document](https://github.com/DeveloperDunne/sports-snaps_frontend/blob/main/README.md).
