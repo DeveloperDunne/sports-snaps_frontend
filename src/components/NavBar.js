@@ -99,7 +99,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/contact"
       >
-        <i className="fi fi-sr-envelopes"></i>Contact
+        <i className="fa-solid fa-at"></i>Contact
       </NavLink>
     </>
   );
@@ -115,8 +115,8 @@ const NavBar = () => {
         <NavLink to="/">
           <Navbar.Brand>
             <img src={camaralogo} alt="logo" height="45" />
-          
           </Navbar.Brand>
+          <h1>Sports Snaps</h1>
         </NavLink>
         {currentUser && addPostIcon}
         <Navbar.Toggle

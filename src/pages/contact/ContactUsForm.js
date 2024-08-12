@@ -75,7 +75,7 @@ const ContactUsForm = () => {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>Name</Form.Label>
+        <Form.Label>Name:</Form.Label>
         <Form.Control
           type="text"
           name="name"
@@ -90,7 +90,7 @@ const ContactUsForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>Email</Form.Label>
+        <Form.Label>Email Address:</Form.Label>
         <Form.Control
           type="text"
           name="email"
