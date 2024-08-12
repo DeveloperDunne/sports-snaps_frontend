@@ -5,13 +5,13 @@ Sports Snaps is a social media platform that lets users post images and share th
 
 ## Live Site
 
-[You can view the live web application here.](https://)
+[You can view the live web application here.](https://sportssnaps-37b7ee6411c9.herokuapp.com/)
 
 ## Site Repositories
 
-[Frontend Repository](https://github.com/)
+[Frontend Repository](https://github.com/DeveloperDunne/sports-snaps_frontend)
 
-[API Repository](https://github.com/)
+[API Repository](https://github.com/DeveloperDunne/Sports-Snaps-API)
 
 ## Table of contents
 
@@ -65,7 +65,7 @@ Sports Snaps is a social media platform that lets users post images and share th
 
 ### MoSCoW
 
-![MoSCoW screenshot](./README_Images/admin_images/MoSCoW.webp)
+![MoSCoW screenshot](./README-Images/MoSCoW.webp)
 
 This project used the "MoSCoW" method to classify its features and requirements according to their importance towards a minimum viable product (MVP). "MoSCoW" stands for "Must have, Should have, Could have and Won't have," with each classification aiding in the prioritisation of features. This method makes sure that essential components are tackled in priority order.
 
@@ -91,66 +91,76 @@ This blog is for sports fans who are interested in interacting with a likeminded
 Balsamiq was used to design the blog's look.
 
 ### Colour Theme
-![Colour Theme](./README_Images/design_images/)
+![Colour Theme](./README-Images/theme.webp)
 
-The colour theme above was used throughout the project to ensure consistency, seem welcoming and and appeal to the user.
+The colour theme above was used throughout the project to ensure consistency, seem welcoming and and appeal to the user. the Navigation bar is a gradient to add uniqueness.
 
 ### Fonts
-Fonts used were .... All were sourced from [Google Fonts](https://fonts.google.com/).
+The font used was 'Teko'. All fonts were sourced from [Google Fonts](https://fonts.google.com/).
 
 ## Features
 
 ### Navigation Bar:
-![Navigation Bar - Not Logged in](./README_Images/site_images/)
+![Navigation Bar](./README-Images/burger.webp)
 
 A responsive navigation bar is situated at the top of the page. When on a mobile the bar condenses into a burger icon which will enable a dropdown menu, however on a desktop all pages are displayed along the bar. What is shown in the navigation bar depends on whether the user is logged in or not.
 
 ### Not logged in:
-![Navigation Bar - Not Logged in](./README_Images/site_images/)
+![Navigation Bar - Not Logged in](./README-Images/navbar.webp)
 
 When not logged in you will be able to see the following pages: Home, Sign In, Sign Up and Contact.
 
 ### Logged in:
-![Navigation Bar - Logged in](./README_Images/site_images/)
+![Navigation Bar - Logged in](./README-Images/logged-in.webp)
 
 When logged in the Register and Sign-in page disappears and instead you will see the following.
 
 ### Landing Page
-![Home Page](./README_Images/site_images/)
+![Home Page](./README-Images/landing-page.webp)
 
 Upon arrival to the website, the landing page will be loaded. Here you will be able to see posts that authorized users have already posted drawing you into what is to come.
 
 ### Contact Page
-![Contact](./README_Images/site_images/)
+![Contact](./README-Images/contactus.webp)
 
 The contact page consists of a form that the user can fill out and submit if they have any questions.
 
 ### Sign Up Page
-![Sign Up](./README_Images/site_images/)
+![Sign Up](./README-Images/signup.webp)
 
 This page is a form where the user can sign up to reap the benefits of being a logged in user.
 
 ### Sign In Page
-![Sign in](./README_Images/site_images/)
+![Sign in](./README-Images/signin.webp)
 
 This page is where the user can sign in so that they can have access to the benefits of being a authorized user.
 
 ### Sign Out Page
-![Sign Out](./README_Images/site_images/)
 
-This is the sign out page where users can log out.
+Once users click the sign out link they will be redirected to the landing page.
 
 ### Add Post Page
+![Sign in](./README-Images/add-post.webp)
+
+Here logged in users can create thier own posts to share wth the community.
 
 ### Feed Page
 
+The feed page will show all of the posts that the registered user has decided to follow.
+
 ### Like Page
+
+the Like page will show all of the psts the regisistered user has liked.
 
 ### Profile Page
 
+![Sign in](./README-Images/profile.webp)
+
+This page will proved all information about a user. If you are the the user of the profile you have the option to amend details.
+
 ### Future Features
 
-Features I would have liked to implement but did not get time to would be a notification feature where authorized users would be notified when someone tat they follow posts a new photo.
+Features I would have liked to implement but did not get time to would be a notification feature where authorized users would be notified when someone that they follow posts a new photo.
 
 I would also liked to added more styling to the overall look of the site however I just ran out of time.
 
