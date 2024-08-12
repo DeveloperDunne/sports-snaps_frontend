@@ -1,7 +1,7 @@
 
 # Testing
 
-Manual testing was carried out to ensure the site and its features worked as expected. My only issue was with the feed feature where it would display all posts and did not filter correctly. Unfortunately I did not have enough time to resolve this issue. 
+Manual testing was carried out to ensure the site and its features worked as expected. My only issues was with the feed and like page features where it would display all posts and did not filter correctly. Unfortunately I did not have enough time to resolve this issue but is something that I wish to solve at a later date.
 
 Validators and Lighthouse reports were also used to minimise errors,all major bugs and fixes are documentd.
 
@@ -20,7 +20,7 @@ Validators and Lighthouse reports were also used to minimise errors,all major bu
 | Open the Homepage unauthenticated                     | Homepage loads and displays posts.                                                                 | ✅ Pass     | 
 | Open the Feed when following users                    | Feed loads and displays the followed users posts.                                                  |  X Fail     | 
 | Open the Like page without liked posts                | Liked page displays hint to like posts.                                                 		     | ✅ Pass     | 
-| Open the Like page with liked posts                   | Liked page loads and displays the liked posts.                                                     | ✅ Pass     |
+| Open the Like page with liked posts                   | Liked page loads and displays the liked posts.                                                     |  X Fail    |
 | Open the Contact page                                 | Contact page and the contact form loads.                                                           | ✅ Pass     | 
 | Open profile page                                     | Clicking on profile page in navbar opens the profile.                                              | ✅ Pass     | 
 | Clicking the logo in navbar loads home page           | Clicking the logo in the navbar sends the user to home page.                                       | ✅ Pass     | 
