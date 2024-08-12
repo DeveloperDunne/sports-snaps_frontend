@@ -1,9 +1,11 @@
 # Sports Snaps - Frontend.
 
-Sports Snaps is a social media platform that lets users post images and share their content with other people. Signed up Members can post pictures, like other posts, comment on posts and also edit and delete their own posts. Members can also follow other members to create a personalized feed.
+Sports Snaps is a social media platform that lets users post images and share their content with other people. Signed up Members can post pictures, like other posts, comment on posts and also edit and delete their posts. Members can also follow other members to create a personalized feed.
 
 
 ## Live Site
+
+![AmIResponsive](./README-Images/responsive.webp)
 
 [You can view the live web application here.](https://sportssnaps-37b7ee6411c9.herokuapp.com/)
 
@@ -39,9 +41,9 @@ Sports Snaps is a social media platform that lets users post images and share th
 
 2. Comment and like posts to interact with the community.
 
-3. Follow my favourite users.
+3. Follow my favorite users.
 
-4. Have access to a contact page where I can contact the admin if required.
+4. Access a contact page where I can contact the admin if required.
 
 5. Register for an account to access the services offered to authorized members.
 
@@ -51,9 +53,9 @@ Sports Snaps is a social media platform that lets users post images and share th
 
 <br>
 
-1. Create and publish a new posts.
+1. Create and publish a new post.
 
-2. Create a new users.
+2. Create a new user.
 
 3. Delete users.
 
@@ -67,23 +69,23 @@ Sports Snaps is a social media platform that lets users post images and share th
 
 ![MoSCoW screenshot](./README-Images/MoSCoW.webp)
 
-This project used the "MoSCoW" method to classify its features and requirements according to their importance towards a minimum viable product (MVP). "MoSCoW" stands for "Must have, Should have, Could have and Won't have," with each classification aiding in the prioritisation of features. This method makes sure that essential components are tackled in priority order.
+This project used the "MoSCoW" method to classify features and requirements according to their importance towards a minimum viable product (MVP). "MoSCoW" stands for "Must have, Should have, Could have and Won't have," with each classification aiding in the prioritization of features. This method makes sure that essential components are tackled in priority order.
 
 ## The Scope
 
 ### Main Site Goals
 
 * To provide users with a good experience when using the website.
-* To provide users with a visually pleasing website that is intuitive to use and easy to navigate.
+* To provide users with a visually pleasing website that is intuitive and easy to navigate.
 * To provide a website with a clear purpose.
 * To provide role-based permissions that allow users to interact with the website.
 * The ability to contact admin if required.
 * The ability to update and delete comments if desired.
-* The ability to interact with community by commenting, following and liking posts.
+* The ability to interact with the community by commenting, following and liking posts.
 
 ### Target audience
 
-This blog is for sports fans who are interested in interacting with a likeminded community who share thier love for sporting moments captured in picturees.
+This blog is for sports fans who are interested in interacting with a like-minded community who share their love for sporting moments captured in pictures.
 
 ## Design
 
@@ -93,7 +95,7 @@ Balsamiq was used to design the blog's look.
 ### Colour Theme
 ![Colour Theme](./README-Images/theme.webp)
 
-The colour theme above was used throughout the project to ensure consistency, seem welcoming and and appeal to the user. the Navigation bar is a gradient to add uniqueness.
+The colour theme above was used throughout the project to ensure consistency, seem welcoming and appeal to the user. The navigation bar is a gradient to add uniqueness.
 
 ### Fonts
 The font used was 'Teko'. All fonts were sourced from [Google Fonts](https://fonts.google.com/).
@@ -133,7 +135,7 @@ This page is a form where the user can sign up to reap the benefits of being a l
 ### Sign In Page
 ![Sign in](./README-Images/signin.webp)
 
-This page is where the user can sign in so that they can have access to the benefits of being a authorized user.
+This page is where the user can sign in so that they can have access to the benefits of being an authorized user.
 
 ### Sign Out Page
 
@@ -142,7 +144,7 @@ Once users click the sign out link they will be redirected to the landing page.
 ### Add Post Page
 ![Sign in](./README-Images/add-post.webp)
 
-Here logged in users can create thier own posts to share wth the community.
+Here logged in users can create their own posts to share with the community.
 
 ### Feed Page
 
@@ -150,19 +152,19 @@ The feed page will show all of the posts that the registered user has decided to
 
 ### Like Page
 
-the Like page will show all of the psts the regisistered user has liked.
+the Like page will show all of the posts the registered user has liked.
 
 ### Profile Page
 
 ![Sign in](./README-Images/profile.webp)
 
-This page will proved all information about a user. If you are the the user of the profile you have the option to amend details.
+This page will provide all information about a user. If you are the the user of the profile you have the option to amend details.
 
 ### Future Features
 
 Features I would have liked to implement but did not get time to would be a notification feature where authorized users would be notified when someone that they follow posts a new photo.
 
-I would also liked to added more styling to the overall look of the site however I just ran out of time.
+I would also liked to add more styling to the overall look of the site however I just ran out of time.
 
 ## Technologies Used
 
@@ -201,7 +203,7 @@ I would also liked to added more styling to the overall look of the site however
 
 ## Testing
 
-Detailed testing documentation can be found here[ TESTING.MD](./TESTING.md)
+Detailed testing documentation can be found here[ TESTING.MD](./TESTING.MD)
 
 ## Deployment
 
@@ -233,11 +235,11 @@ All code for this project was written using the IDE Visual Studio code (VS Code)
 
 ### Cloning:
 
-1.  Go to the repository on GitHub.
+1. Go to the repository on GitHub.
 
-2.  Click on the Code button and copy the https URL under Clone.
+2. Click on the Code button and copy the https URL under Clone.
 
-3.  Open a terminal.
+3. Open a terminal.
 
 4. Go to the folder you want to store the cloned repository.
 
@@ -255,7 +257,7 @@ All code for this project was written using the IDE Visual Studio code (VS Code)
 ### Code
 The CI walkthroughs (DRF Rest Framework API & Moments) were leaned on and relied upon heavily in this project due to time restraints, there are still some remnants of legacy code within. As I was really pushed for time to complete the project I used the CI code and initial styling as a base before implementing my own custom features and styles. 
 
-I created a Contact model where users can contact the admin if equired by filling out a form and also added a category feature.
+I created a Contact model where users can contact the admin if required by filling out a form and also added a category feature.
 
 ## Acknowledgements
 Thank you to the Slack community and especially tutors which I relied on a lot for all their help throughout this project. Also thank you to my friends and family for help with testing the project.

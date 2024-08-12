@@ -101,28 +101,26 @@ Validators and Lighthouse reports were also used to minimise errors,all major bu
 
 ## W3C CSS
 
-[Screenshot]
-
-## Wave
-
-[Screenshot]
+![CSS Validation screenshot](./README-Images/css-validator.webp)
 
 # Reports
 
 ## Lighthouse
 
-[Screenshot]
+![Lighthouse screenshot](./README-Images/lighthouse.webp)
 
 # Bugs and Fixes
 
 ## Bug 1
 
-[Screenshot]
+![Bug1 screenshot](./README-Images/bug1.webp)
+
+Here I had my deployed Heroku address wrong which was causing the error to not let me post anything.
 
 ## Bug 2
 
-[Screenshot]
+![Bug2 screenshot](./README-Images/bug2.webp)
 
-## Bug3
+Here after a long long time i relaised that my CLIENT_Origin had an extra underscore at the end of it which was causing all the errors.
 
-[Screenshot]
+![BugIssue screenshot](./README-Images/bug2-issue.webp)
