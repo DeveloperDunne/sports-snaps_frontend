@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
-import ChooseCategory from "../../components/ChooseCategory";
+
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
 import { useLocation } from "react-router";
@@ -17,25 +17,22 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
-function PostsPage({ message }) {
+function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
-  const [filter, setFilter] = useState("");
+
   const [query, setQuery] = useState("");
-  const currentUser = useCurrentUser();
-  const profile_id = currentUser?.profile_id || "";
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}&search=${query}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        // console.log(err);
+        console.log(err);
       }
     };
 
@@ -47,21 +44,18 @@ function PostsPage({ message }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname, currentUser, profile_id]);
-
+  }, [filter, query, pathname]);
 
   return (
     <Row className="h-100">
-      <Col lg={12}>
-      
-      </Col>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
-        <Form 
+        <i className={`fas fa-search ${styles.SearchIcon}`} />
+        <Form
           className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
         >
-        <Form.Control
+          <Form.Control
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             type="text"
@@ -69,8 +63,6 @@ function PostsPage({ message }) {
             placeholder="Search posts"
           />
         </Form>
-
-        <ChooseCategory setFilter={setFilter} />
 
         {hasLoaded ? (
           <>
