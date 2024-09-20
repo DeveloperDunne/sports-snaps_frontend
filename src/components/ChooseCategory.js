@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import styles from "../App.module.css"
 import PropTypes from 'prop-types';
 
-const ChooseCategory = ({ setFilter, mobile }) => {
+const ChooseCategory = ({ setCategory, mobile }) => {
     const [category, setCategories] = useState([]);
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const ChooseCategory = ({ setFilter, mobile }) => {
                 <Form.Control
                     className={styles.Dropdown}
                     as="select"
-                    onChange={(e) => setFilter(`category=${e.target.value}&`)}
+                    onChange={(e) => setCategory(`category=${e.target.value}&`)}
                     defaultValue=""
                 >
                     <option value="">All Categories</option>

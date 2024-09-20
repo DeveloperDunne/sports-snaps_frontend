@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
-
+import ChooseCategory from "../../components/ChooseCategory";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
 import { useLocation } from "react-router";
@@ -19,6 +19,7 @@ import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 
 function PostsPage({ message, filter = "" }) {
+  const [category, setCategory] = useState("");
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
@@ -28,7 +29,7 @@ function PostsPage({ message, filter = "" }) {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}${category}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -44,7 +45,7 @@ function PostsPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname]);
+  }, [category, filter, query, pathname]);
 
   return (
     <Row className="h-100">
@@ -63,7 +64,7 @@ function PostsPage({ message, filter = "" }) {
             placeholder="Search posts"
           />
         </Form>
-
+        <ChooseCategory mobile setCategory={setCategory} />
         {hasLoaded ? (
           <>
             {posts.results.length ? (
