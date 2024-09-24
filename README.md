@@ -172,19 +172,22 @@ I would also liked to add more styling to the overall look of the site however I
 <details>
 <summary>React Components</summary>
 <summary>
+<br>
 
 1. **Asset.js:**
+
 <br>
 This component displays a spinner when the page is loading. It can be reused wherever a spinner could be needed, for example when something is loading.
+
 <br>
 
--`Const Asset` is a reusable component and has been reused in other componenets to display a spinner when some content is loading.  The spinner was imported from ‘react-bootstrap’. 
+-`Const Asset` is a reusable component and has been reused in other components to display a spinner when some content is loading.  The spinner was imported from ‘react-bootstrap’. 
 <br>
 
 This was used in:
 <br>
 
--  NotFound.js
+- NotFound.js
 - PostCreateForm.js
 - PostPage.js
 - PostsPage.js
@@ -194,6 +197,7 @@ This was used in:
 <br>
 
 2. **Avatar.js:**
+
 <br>
 This component arranges the Avatar images for users. It can be reused for whenever a user is added an avatar image is assigned before the user changes the image.
 
@@ -230,14 +234,15 @@ This component can be reused as a simple dropdown menu for when users need to ed
 - Comment.js
 - Post.js
 - ProfilePage.js 
+
 <br>
 
-
 5. **NotFound.js:**
+
 <br> 
 This component displays the image that is displayed when a request can't be found.<br>
 
--‘Const NotFound` has been used in App.js inside a path to display a "Not found" message when a user wants to use a path that doesn't exist. It was also given a source of NoResults which has been reused in:
+-Const NotFound has been used in App.js inside a path to display a "Not found" message when a user wants to use a path that doesn't exist. It was also given a source of NoResults which has been reused in:
 <br>
 - PostsPage.js
 - ProfilePage.js 
@@ -261,14 +266,15 @@ This component enables users to sign up and register an account.
 
 8. **Comment.js:**<br> This component displays a comment with added options to edit or delete it by the user who owns the comment.<br>
 This component can be reused in environments such as blog posts.<br>
+<br> 
 
 -`Const Comment` is a reusable component and has been reused in
-    PostPage.js.
+ PostPage.js.
 <br>
 
 9. **CommentCreateForm.js:**
 <br>
-This s designed to allow users to create a new comment. .
+This is designed to allow users to create a new comment.
 <br>
 
 - `Function CommentCreateForm` is a reusable component and was reused in:<br>
@@ -277,6 +283,7 @@ This s designed to allow users to create a new comment. .
 <br>
 
 10. **CommentEditForm.js:**
+
 <br> 
 This allows users to edit existing comments. It allows the user to update the comment's content and save any changes.
 <br>
@@ -284,6 +291,7 @@ This component can be reused in Comment.js and CommentCreateForm.js.
 <br>
 
 - `Function CommentEditForm` is considered a reusable component and has been reused in Comment.js.<br>
+<br> 
 
 11. **ContactForm.js:**
 <br>
@@ -291,6 +299,7 @@ This component is designed for users to reach out and contact the site owner by 
 <br>
 
 - `Const ContactForm` is considered a reusable component.<br>
+<br> 
 
 12. **Post.js:**
 <br> 
@@ -300,34 +309,37 @@ Can be reused in Blogs or forum threads.<br>
 - `Const Post` is considered a reusable component and has been reused in the following:<br>
 
 - PostPage.js
-- PostsPage.js<br>
+- PostsPage.js
+
+<br>
 
 13. **PostCreateForm.js:**
 <br> 
 This component is used to create new posts. It includes form fields for entering a post title, content, an optional image upload, and selecting a category. Users can fill out these fields, upload an image if they want and submit the form to create a new post.<br>
 
 - `Function PostCreateForm` is a reusable component.
+<br> 
 
 14. **PostEditForm.js:**
 <br> 
 This component is used to edit forms of posts. Users can edit all fields and resubmit the form to update the post.<br>
 
 - `Function PostEditForm` is considered a reusable component.
-
+<br> 
 
 15. **PostPage.js:**
 <br> 
 This component displays the post content.<br>
 
 - `Function PostPage` is a reusable component.
-
+<br> 
 16. **PostsPage.js:**
 <br> 
 This component  displays posts dependant on different filters.<br>
 
 - `Function PostsPage` can be reused.
 
-
+<br> 
 17. **PopularProfiles.js:**
 <br> 
 This component displays all popular profiles.<br>
@@ -339,33 +351,40 @@ Can be used in other applications as i.e a featured section.<br>
 - PostsPage.js
 - ProfilePage.js 
 
+<br> 
+
 18. **Profile.js:**
 <br> 
 This component is designed to display a user profile with options for following or unfollowing..<br>
 
-- `Const Profile` is considered a reusable component and was been reused in:<br>
+- `Const Profile` is considered a reusable component and has been reused in:<br>
 
-- PopularProfiles.js<br>
+- PopularProfiles.js
+<br>
 
 19. **ProfileEditForm.js:**
 <br> 
 This component allows a user to edit their profile information.<br>
 
 - `Const ProfileEditForm` is a reusable component.
+<br> 
 
 20. **ProfilePage.js:**
 <br> 
 This component displays a user's profile information. This information includes a profile picture, follower counts, and their own posts.<br> 
 
-- `Function ProfilePage` is  a reusable component.
+- `Function ProfilePage` is a reusable component.
+<br> 
 
 21. **UsernameForm.js:**
+
 <br>
 This component allows users to change their username.
 <br>
 - `Const UsernameForm` is a reusable component.
 
 <br>
+
 22. **UserPasswordForm.js:** 
 
 <br>
