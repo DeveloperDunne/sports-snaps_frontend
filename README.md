@@ -91,7 +91,7 @@ This blog is for sports fans who are interested in interacting with a like-minde
 ## Design
 
 ### Wireframes
-Balsamiq was used to design the blog's look.
+Balsamiq was used to design the websites look before implementing. I designed them on a desktop and mobile to ensure users could navigate easily and the website looked good on all devices.
 
 Home Page:
 ![Home page](./README-Images/WF-home.webp)
@@ -108,10 +108,10 @@ Profile Page:
 ### Colour Theme
 ![Colour Theme](./README-Images/theme.webp)
 
-The colour theme above was used throughout the project to ensure consistency, seem welcoming and appeal to the user. The navigation bar is a gradient to add uniqueness.
+The colour theme above was used throughout the project to ensure consistency, seem welcoming and appeal to the user. Blue is a calming colour and so with all the possible interaction going on in the site I wanted to make the user fell at ease. The navigation bar is a gradient to add uniqueness.
 
 ### Fonts
-The font used was 'Teko'. All fonts were sourced from [Google Fonts](https://fonts.google.com/).
+The font used was 'Teko'. I chose this font due to it feeling a bit sporty and reminding me of sports programmes I have watched so I felt it would tie in nicely with the page. All fonts were sourced from [Google Fonts](https://fonts.google.com/).
 
 ## Features
 
