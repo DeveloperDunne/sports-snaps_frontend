@@ -93,6 +93,18 @@ This blog is for sports fans who are interested in interacting with a like-minde
 ### Wireframes
 Balsamiq was used to design the blog's look.
 
+Home Page:
+![Home page](./README-Images/WF-home.webp)
+Sign Up Page:
+![Sign up page](./README-Images/WF-signup.webp)
+Sign In Page:
+![Sign in page](./README-Images/WF-signin.webp)
+Contact Page:
+![Contact page](./README-Images/WF-contact.webp)
+Profile Page:
+![Profile page](./README-Images/WF-profile.webp)
+
+
 ### Colour Theme
 ![Colour Theme](./README-Images/theme.webp)
 
