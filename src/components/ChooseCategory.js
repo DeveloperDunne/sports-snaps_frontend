@@ -3,7 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import appStyles from "../App.module.css";
 import Form from "react-bootstrap/Form";
 import styles from "../App.module.css"
-import PropTypes from 'prop-types';
+
 
 const ChooseCategory = ({ setCategory, mobile }) => {
     const [category, setCategories] = useState([]);
@@ -49,9 +49,6 @@ const ChooseCategory = ({ setCategory, mobile }) => {
         </Container>
     );
 };
-ChooseCategory.propTypes = {
-    setFilter: PropTypes.func.isRequired,
-    mobile: PropTypes.bool,
-  };
+
 
 export default ChooseCategory;
