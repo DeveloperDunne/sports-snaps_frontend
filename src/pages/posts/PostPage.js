@@ -12,7 +12,7 @@ import Comment from "../comments/Comment";
 
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-
+import PopularProfiles from "../profiles/PopularProfiles";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
@@ -81,7 +81,7 @@ function PostPage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular Profiles
+        <PopularProfiles />
       </Col>
     </Row>
   );
