@@ -420,7 +420,21 @@ This component allows users to change their password. It integrates with React, 
 
 ### Frameworks & Libraries Used
 
+I used a variety of libraries and tools for functionality and development. Below is a list of these along and the purposes:
+
+* React: A JavaScript library for building interactive user interfaces. Ideal for single-page applications.
+
 * React-Bootstrap: This was used to style the website, and add responsiveness and interactivity.
+
+* Axios: A HTTP client for making HTTP requests, used for fetching or saving data from/to a server.
+
+* React Router DOM: Used for navigation in React applications, enabling routing without page reloads.
+
+* React Infinite Scroll Component: Implements infinite scrolling, loading content as the user scrolls down.
+
+* JWT-Decode: A library for decoding JSON Web Tokens.
+
+* Node.js and npm Versions: The project uses Node.js and npm versions to ensure a consistent environment setup.
 
 * Git: Was used for version control to commit to Git and push to GitHub.
 
