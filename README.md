@@ -90,6 +90,12 @@ This blog is for sports fans who are interested in interacting with a like-minde
 
 ## Design
 
+During the design phase I wanted to prioritize the below points.
+
+* Simple Navigation: The navigation bar to be clear with icons to help users find the features. I wanted the site users to be able to navigate easily via the 'Search Bar' and 'Categories" dropdown menu.
+
+* Muted Color Palette: The color scheme to be a muted color palette to put the focus on the content.
+
 ### Wireframes
 Balsamiq was used to design the websites look before implementing. I designed them on a desktop and mobile to ensure users could navigate easily and the website looked good on all devices.
 
