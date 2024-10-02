@@ -26,7 +26,7 @@ Sports Snaps is a social media platform that lets users post images and share th
 - [7. Django Admin](#django-admin)
 - [8. Technologies Used](#technologies-used)
 - [9. Testing](#testing)
-- [10. Deployment](#deployment)
+- [10. Deployment](#heroku-deployment)
 - [11. Credits](#credits)
 - [12. Acknowledgements](#acknowledgements)
 
@@ -470,9 +470,23 @@ Detailed testing documentation can be found here[ TESTING.MD](./TESTING.MD)
 
 All code for this project was written using the IDE Visual Studio code (VS Code) using a Gitpod workspace. Github was used for version control and the application was deployed via Heroku.
 
- ### Heroku Deployment
+## Heroku Deployment
 
-* This site was deployed by completing the following steps:
+This project is deployed on Heroku, a cloud platform service that enables deployment for web applications. The deployment process includes the following steps:
+
+### Initial Setup
+
+1. **Create a Heroku Account**: Sign up for a Heroku account at [Heroku's website](https://www.heroku.com/).
+
+2. **Install Heroku CLI**: Download and install the Heroku Command Line Interface (CLI) to interact with Heroku from your local machine.
+
+### Preparing the Application
+
+1. **Procfile**: Create a `Procfile` in your project root directory. This file tells Heroku how to run your application.
+2. **Requirements.txt**: Ensure you have a `requirements.txt` file listing all project dependencies.
+3. **Config Vars**: Set up necessary configuration variables in Heroku (i.e `SECRET_KEY`, `DATABASE URL`).
+
+### Deployment
 
 1. Log in to Heroku or create an account.
 
@@ -493,6 +507,11 @@ All code for this project was written using the IDE Visual Studio code (VS Code)
 9. Search your repository name and connect.
 
 10. Click either Enable Automatic Deploys for automatic deployment when you push updates to GitHub or manual to do this manually.
+
+### Final Steps
+
+1. **Enable the Web Dyno**: Make sure the web dyno is up and running after deployment.
+2. **Open the App**: You can open your application from the Heroku dashboard or using the CLI command `heroku open`.
 
 ### Cloning:
 
